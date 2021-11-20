@@ -14,11 +14,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
-/**
- *
- * @author gabri
- */
-public class Patient {
+
+public class Patient implements Runnable {
     
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     
@@ -26,6 +23,10 @@ public class Patient {
     private String name;
     private String lastname;
     private String telephone;
+
+    public static BufferedReader getReader() {
+        return reader;
+    }
     private String address;
     private Date dateOfBirth;
     private String dni; 
@@ -267,6 +268,11 @@ public static  void main(String[] args){
         System.out.println(report.getTodaysDate());
     
 }
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
     
     

@@ -5,10 +5,7 @@
  */
 package serversleepcontrolproject;
 
-/**
- *
- * @author gabri
- */
+
 public class ServerSleepControlProject {
 
     /**

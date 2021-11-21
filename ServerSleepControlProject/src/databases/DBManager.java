@@ -96,14 +96,15 @@ public class DBManager implements DBManagerInterface {
 
 			stmt3.executeUpdate(sql3);
 			stmt3.close();
+                        
                         Statement stmt4 = c.createStatement();
 			String sql4 = "CREATE TABLE Users " 
 					+ "(patient_id INTEGER PRIMARY KEY AUTOINCREMENT," 
 					+ "PATIENT_DNI TEXT,"
                                         + "Password";
 
-			stmt3.executeUpdate(sql4);
-			stmt3.close();
+			stmt4.executeUpdate(sql4);
+			stmt4.close();
 
 			System.out.println("Tables created.");
 			// Create table: end

@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 
@@ -23,6 +24,7 @@ public class Patient implements Runnable {
     private String name;
     private String lastname;
     private String telephone;
+    private ArrayList<Integer> recordedEEG;
 
     public static BufferedReader getReader() {
         return reader;
@@ -53,8 +55,8 @@ public class Patient implements Runnable {
 		this.gender = gender;
 		this.address = addres;
 	}
-    public Patient(String name, String lastname, String telephone, String address, Date dateOfBirth, String dni, String gender){
-        super();
+    public Patient(String name, String lastname, String telephone, String address, Date dateOfBirth, String dni, String gender,ArrayList<Integer> recordedECG){
+       
         this.name = name;
         this.lastname = lastname;
         this.telephone = telephone;
@@ -62,6 +64,7 @@ public class Patient implements Runnable {
         this.dateOfBirth = dateOfBirth;
         this.dni = dni;
         this.gender = gender;
+        this.recordedEEG = new ArrayList();
     }
     
     public Patient(Integer id,String name, String lastname, String telephone){
@@ -155,6 +158,17 @@ public class Patient implements Runnable {
             e.printStackTrace();
             }
     return newreport;
+    }
+    
+    
+    public void setEEG (ArrayList<Integer> ecgValues){
+        this.recordedEEG = ecgValues;
+    }
+    public void setEEGToZero(){
+        this.recordedEEG.clear();
+    }
+    public ArrayList getRecordedEEG(){
+        return recordedEEG;
     }
     
     public Integer getId() {

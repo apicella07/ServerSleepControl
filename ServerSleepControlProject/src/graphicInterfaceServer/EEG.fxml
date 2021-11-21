@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="graphicInterfaceServer.EEGController">
+   <children>
+      <LineChart fx:id="ecgGraphics" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="411.0" prefWidth="600.0" title="EEG">
+         <xAxis>
+            <CategoryAxis label="Time(ms)" opacity="0.82" prefHeight="35.0" prefWidth="518.0" side="BOTTOM" fx:id="x" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="y" lowerBound="-15.0" prefHeight="307.0" prefWidth="28.0" side="LEFT" tickLabelGap="5.0" upperBound="15.0">
+               <tickLabelFont>
+                  <Font size="11.0" />
+               </tickLabelFont>
+            </NumberAxis>
+         </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
